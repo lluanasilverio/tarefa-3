@@ -1,0 +1,360 @@
+{
+	"id": "12928fd3-7caf-47d0-9a10-cb507d237d0d",
+	"name": "Golden Movie Studio",
+	"timestamp": "2025-04-25T21:08:23.957Z",
+	"collection_id": "44411774-1b936054-d6be-43a6-a4b2-9f7ceaaf7e6f",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 18,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-04-25T21:08:22.878Z",
+	"totalFail": 5,
+	"results": [
+		{
+			"id": "a85ebb7c-a609-42c1-bbc7-b5cdaa5a6b46",
+			"name": "Buscar por ID válido",
+			"url": "http://localhost:3000/usuario/id/1",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Deve validar id, nome, email": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar id, nome, email": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Deve validar id, nome, email": true
+				}
+			]
+		},
+		{
+			"id": "ac1c0bbb-6f08-4623-89c3-5936603a1dd4",
+			"name": "Buscar por ID inválido",
+			"url": "http://localhost:3000/usuario/id/8",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 404": false,
+				"Deve validar a propriedade message": false,
+				"Deve validar mensagem de retorno": false
+			},
+			"testPassFailCounts": {
+				"Status code is 404": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Deve validar a propriedade message": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				7
+			],
+			"allTests": [
+				{
+					"Status code is 404": false,
+					"Deve validar a propriedade message": false,
+					"Deve validar mensagem de retorno": false
+				}
+			]
+		},
+		{
+			"id": "b86cbeb3-ba88-43c0-a65d-cd2345f12287",
+			"name": "Email já cadastrado",
+			"url": "http://localhost:3000/cadastro",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Deve validar a propriedade message": true,
+				"Deve validar mensagem de retorno": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar a propriedade message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Deve validar a propriedade message": true,
+					"Deve validar mensagem de retorno": true
+				}
+			]
+		},
+		{
+			"id": "94f4fd99-b3bd-452f-8d6c-148f186d3bfb",
+			"name": "Cadastro realizado",
+			"url": "http://localhost:3000/cadastro",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Deve validar a propriedade message": true,
+				"Deve validar mensagem de retorno": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Deve validar a propriedade message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Deve validar a propriedade message": true,
+					"Deve validar mensagem de retorno": false
+				}
+			]
+		},
+		{
+			"id": "e53fbbe2-a092-428b-9028-bc1d6a412b82",
+			"name": "Verificação de campos vazios",
+			"url": "http://localhost:3000/cadastro",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Deve validar a propriedade message": true,
+				"Deve validar mensagem de retorno": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar a propriedade message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Deve validar a propriedade message": true,
+					"Deve validar mensagem de retorno": true
+				}
+			]
+		},
+		{
+			"id": "f08fae39-b24b-4283-b9f4-006d31c52fae",
+			"name": "Verificação de campos string",
+			"url": "http://localhost:3000/cadastro",
+			"time": 5,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Deve validar a propriedade message": true,
+				"Deve validar mensagem de retorno": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar a propriedade message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				5
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Deve validar a propriedade message": true,
+					"Deve validar mensagem de retorno": true
+				}
+			]
+		},
+		{
+			"id": "d8b47e63-3855-4926-ae79-7ecb118d8e61",
+			"name": "Validação de senha forte",
+			"url": "http://localhost:3000/cadastro",
+			"time": 4,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Deve validar a propriedade message": true,
+				"Deve validar mensagem de retorno": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar a propriedade message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				4
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Deve validar a propriedade message": true,
+					"Deve validar mensagem de retorno": true
+				}
+			]
+		},
+		{
+			"id": "02f8f35d-09d5-4af3-b18f-2084cd4bcbbc",
+			"name": "Verificação de telefone inválido",
+			"url": "http://localhost:3000/cadastro",
+			"time": 6,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Deve validar a propriedade message": true,
+				"Deve validar mensagem de retorno": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar a propriedade message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Deve validar mensagem de retorno": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				6
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Deve validar a propriedade message": true,
+					"Deve validar mensagem de retorno": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 44,
+	"collection": {
+		"requests": [
+			{
+				"id": "a85ebb7c-a609-42c1-bbc7-b5cdaa5a6b46",
+				"method": "GET"
+			},
+			{
+				"id": "ac1c0bbb-6f08-4623-89c3-5936603a1dd4",
+				"method": "GET"
+			},
+			{
+				"id": "b86cbeb3-ba88-43c0-a65d-cd2345f12287",
+				"method": "POST"
+			},
+			{
+				"id": "94f4fd99-b3bd-452f-8d6c-148f186d3bfb",
+				"method": "POST"
+			},
+			{
+				"id": "e53fbbe2-a092-428b-9028-bc1d6a412b82",
+				"method": "POST"
+			},
+			{
+				"id": "f08fae39-b24b-4283-b9f4-006d31c52fae",
+				"method": "POST"
+			},
+			{
+				"id": "d8b47e63-3855-4926-ae79-7ecb118d8e61",
+				"method": "POST"
+			},
+			{
+				"id": "02f8f35d-09d5-4af3-b18f-2084cd4bcbbc",
+				"method": "POST"
+			}
+		]
+	}
+}
